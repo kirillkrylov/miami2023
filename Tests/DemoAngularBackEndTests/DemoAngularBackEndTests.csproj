@@ -7,10 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="MockResponse\Mock_Calendar.json" />
+    <None Remove="MockResponse\Mock_FindUser_Empty.json" />
     <None Remove="MockResponse\Mock_FindUser_kirillkrylov.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="MockResponse\Mock_Calendar.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MockResponse\Mock_FindUser_Empty.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="MockResponse\Mock_FindUser_kirillkrylov.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -24,15 +32,13 @@
 	  </PackageReference>
 
 	  <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.6" />
-
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-
 	  <PackageReference Include="System.Net.Http" Version="4.3.4" />
 
 	  <Reference Include="System.Web" />
 	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.6" />
 	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
-	  <PackageReference Include="NSubstitute" Version="5.0.0" />
+	  <PackageReference Include="NSubstitute" Version="3.1.0" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
@@ -42,5 +48,153 @@
   <ItemGroup>
     <ProjectReference Include="..\..\packages\DemoAngularBackEnd\Files\DemoAngularBackEnd.csproj" />
   </ItemGroup>
+
+	<PropertyGroup>
+		<CoreLibPath>..\..\.application\net-framework\core-bin\</CoreLibPath>
+	</PropertyGroup>
+ <ItemGroup Label="Core References">
+        <Reference Include="Terrasoft.Common">
+            <HintPath>$(CoreLibPath)/Terrasoft.Common.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.TestFramework">
+          <HintPath>Libs\Terrasoft.TestFramework.dll</HintPath>
+        </Reference>
+        <Reference Include="Terrasoft.Web.Common">
+            <HintPath>$(CoreLibPath)/Terrasoft.Web.Common.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.GlobalSearch">
+            <HintPath>$(CoreLibPath)/Terrasoft.GlobalSearch.dll</HintPath>
+        </Reference>
+        <Reference Include="Terrasoft.Nui.ServiceModel">
+            <HintPath>$(CoreLibPath)/Terrasoft.Nui.ServiceModel.dll</HintPath>
+        </Reference>
+        <Reference Include="Terrasoft.Web.Http.Abstractions">
+            <HintPath>$(CoreLibPath)/Terrasoft.Web.Http.Abstractions.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core.ConfigurationBuild">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.ConfigurationBuild.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core.DI">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.DI.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core.Packages">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.Packages.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core.Process">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.Process.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core.Scheduler">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.Scheduler.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Terrasoft.Core.ScriptEngine">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.ScriptEngine.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Core.Translation">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.Translation.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.File.Abstractions">
+            <HintPath>$(CoreLibPath)/Terrasoft.File.Abstractions.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.File">
+            <HintPath>$(CoreLibPath)/Terrasoft.File.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.GoogleServerConnector">
+            <HintPath>$(CoreLibPath)/Terrasoft.GoogleServerConnector.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.IO">
+            <HintPath>$(CoreLibPath)/Terrasoft.IO.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Monitoring">
+            <HintPath>$(CoreLibPath)/Terrasoft.Monitoring.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Nui">
+            <HintPath>$(CoreLibPath)/Terrasoft.Nui.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Messaging.Common">
+            <HintPath>$(CoreLibPath)/Terrasoft.Messaging.Common.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Mobile">
+            <HintPath>$(CoreLibPath)/Terrasoft.Mobile.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Services">
+            <HintPath>$(CoreLibPath)/Terrasoft.Services.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Social">
+            <HintPath>$(CoreLibPath)/Terrasoft.Social.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Sync">
+            <HintPath>$(CoreLibPath)/Terrasoft.Sync.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.GlobalSearch">
+            <HintPath>$(CoreLibPath)/Terrasoft.GlobalSearch.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Creatio.FeatureToggling">
+            <HintPath>$(CoreLibPath)/Creatio.FeatureToggling.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="Terrasoft.Web.Security">
+            <HintPath>$(CoreLibPath)/Terrasoft.Web.Security.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+				<Reference Include="Terrasoft.Security.Secrets">
+            <HintPath>$(CoreLibPath)/Terrasoft.Security.Secrets.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+				<Reference Include="System.Collections.Immutable">
+            <HintPath>$(CoreLibPath)/System.Collections.Immutable.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+				<Reference Include="Common.Logging.Core">
+            <HintPath>$(CoreLibPath)/Common.Logging.Core.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+				<Reference Include="Common.Logging">
+            <HintPath>$(CoreLibPath)/Common.Logging.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+				<Reference Include="Terrasoft.Core.GlobalAppSettings">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.GlobalAppSettings.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>	
+				<Reference Include="Quartz">
+            <HintPath>$(CoreLibPath)/Quartz.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+				</Reference>
+				<Reference Include="Terrasoft.Core.Scheduler">
+            <HintPath>$(CoreLibPath)/Terrasoft.Core.Scheduler.dll</HintPath>
+            <SpecificVersion>False</SpecificVersion>
+        </Reference>
+        <Reference Include="UnitTest">
+          <HintPath>Libs\UnitTest.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
 
 </Project>

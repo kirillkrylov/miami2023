@@ -2,4 +2,4 @@
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_miami2023&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_miami2023)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_miami2023&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_miami2023)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_miami2023&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_miami2023)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_miami2023&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_miami2023)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_miami2023&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_miami2023) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_miami2023&metric=coverage)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_miami2023)

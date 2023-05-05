@@ -2,15 +2,14 @@
 {
 	using Dto;
 	using ErrorOr;
-	using Newtonsoft.Json;
-	using Newtonsoft.Json.Linq;
 	using System;
 	using System.Collections.Generic;
 	using System.Net.Http;
 	using System.Net.Http.Headers;
 	using System.Text;
 	using System.Threading.Tasks;
-	using Terrasoft.Core;
+	using Newtonsoft.Json;
+	using Newtonsoft.Json.Linq;
 	using Terrasoft.Core.Configuration;
 	using Terrasoft.Core.Factories;
 
@@ -50,11 +49,13 @@
 			login =>
 				$"{{\"query\":\"query($start: DateTime, $end: DateTime){{user(login: \\\"{login}\\\") {{email, createdAt,contributionsCollection(from: $start,to: $end){{contributionCalendar {{weeks {{contributionDays {{weekday date contributionCount color}}}}}}}}}}}}\",\"variables\":{{\"start\":\"{DateTimeOffset.UtcNow.AddYears(-1):yyyy-MM-ddThh:mm:ssZ}\",\"end\":\"{DateTimeOffset.UtcNow:yyyy-MM-ddThh:mm:ssZ}\"}}}}";
 
-		private static readonly Func<string> GetCurrentUserToken = () =>
-			SysSettings.GetValue(
-				ClassFactory.Get<UserConnection>(),
+		private static readonly Func<string> GetCurrentUserToken = () => {
+
+			return SysSettings.GetValue(
+				ClassFactory.Get<Terrasoft.Core.UserConnection>(),
 				"GitHubUserToken",
 				string.Empty);
+		};
 
 		private readonly HttpClient _httpClient;
 

@@ -30,9 +30,8 @@ namespace DemoAngularBackEnd.WebServices
 			ResponseFormat = WebMessageFormat.Json)]
 		public MyValueResponse<List<User>> FindUser(string searchValue) {
 
-			IDemoAngularBackEnd gitHub = ClassFactory.Get<IDemoAngularBackEnd>("DemoAngularBackEnd");
 			ErrorOr<List<User>> response = AppStartUp.DemoAngularBackEnd.FindUser(searchValue).Result;
-
+			//IDemoAngularBackEnd gitHub = ClassFactory.Get<IDemoAngularBackEnd>("DemoAngularBackEnd");
 			//ErrorOr<List<User>> response = gitHub.FindUser(searchValue).Result;
 
 			if(response.IsError) {

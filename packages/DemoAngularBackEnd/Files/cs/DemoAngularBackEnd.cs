@@ -45,7 +45,7 @@
 
 		#region Constants: Private
 
-		private const string _githubBaseUrl = "https://api.github.com/";
+		private const string GithubBaseUrl = "https://api.github.com/";
 
 		#endregion
 
@@ -64,7 +64,7 @@
 			services.AddValidatorsFromAssemblyContaining(typeof(DemoAngularBackEnd));
 			services
 				.AddHttpClient("GitHub", cfg => {
-					cfg.BaseAddress = new Uri(_githubBaseUrl);
+					cfg.BaseAddress = new Uri(GithubBaseUrl);
 					cfg.DefaultRequestHeaders.Add("User-Agent", "CreatioDemoAngularBackEnd/7.8.0");
 					cfg.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json");
 				});

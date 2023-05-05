@@ -1,5 +1,7 @@
-import {Component, HostBinding, Input, OnInit} from "@angular/core";
+import {Component, HostBinding, Input, OnDestroy, OnInit} from "@angular/core";
+import { FormControl, Validators } from "@angular/forms";
 import {CrtInput, CrtInterfaceDesignerItem, CrtViewElement, HttpClientService} from "@creatio-devkit/common";
+import { SubscriptionLike, debounceTime, filter, switchMap } from "rxjs";
 
 @CrtViewElement({
   selector: "mrkt-demo",
@@ -24,7 +26,9 @@ import {CrtInput, CrtInterfaceDesignerItem, CrtViewElement, HttpClientService} f
   styleUrls : ['./demo.component.css']
 })
 
-export class DemoComponent  implements OnInit{
+export class DemoComponent  implements OnInit, OnDestroy {
+	private _control = new FormControl('', [Validators.minLength(5)]);
+	private _subscription?: SubscriptionLike;
 	@HostBinding("style.--hue") cssDefaultHue: number = 130; //github style color
 	calendarData = new Array<string>();
 
@@ -55,16 +59,21 @@ export class DemoComponent  implements OnInit{
 	@Input() 
 	@CrtInput()
 	public set userEmail(v : string) {
+
+		this._control.setValue(v);
 		this._userEmail = v;
-		(async ()=>{
-			const login = await this.getData(this.userEmail);
-			await this.getCalendar(login);
-		})();
 	}
 	
 
 	ngOnInit(): void {
-		
+		this._subscription = this._control.valueChanges.pipe(
+			filter(() => Boolean(this._control.value)),
+			filter(x => this._control.valid),
+			debounceTime(1000),
+			switchMap(() => this.getData(this._control.value as string)),
+			filter(login => Boolean(login)),
+			switchMap(login => this.getCalendar(login))
+		).subscribe()
 		// this.userDefinedData.forEach(d=>{
 		// 	this.calendarData.push(`c${d}`);
 		// });
@@ -91,15 +100,17 @@ export class DemoComponent  implements OnInit{
 	 * 
 	 */
 	async getData(userEmail: string):Promise<string>{
-		const httpClient = new HttpClientService();
-		const result = await httpClient.get(
-			`/rest/GitHubData/FindUser?searchValue=${userEmail}`,
-			{responseType: "text"});
+		try {
+			const httpClient = new HttpClientService();
+			const result = await httpClient.get(
+				`/rest/GitHubData/FindUser?searchValue=${userEmail}`,
+				{responseType: "text"});
 
-		if(result.body){
-			const login = JSON.parse(result.body).value[0].Login
-			return login;
-		}
+			if(result.body){
+				const login = JSON.parse(result.body).value[0].Login
+				return login;
+			}
+		} catch(_) {}
 		return "";
 	}
 
@@ -110,10 +121,17 @@ export class DemoComponent  implements OnInit{
 			{responseType: "text"});
 		if(result.body){
 			const daysArray:Array<number> =  JSON.parse(result.body)['value']
+			
+			this.calendarData = new Array<string>();
 			daysArray.forEach(d=>{
+				
 				this.calendarData.push(`c${d}`); 
 			})
 			console.log(result.body);
 		}
+	}
+
+	public ngOnDestroy() {
+		this._subscription?.unsubscribe();
 	}
 }

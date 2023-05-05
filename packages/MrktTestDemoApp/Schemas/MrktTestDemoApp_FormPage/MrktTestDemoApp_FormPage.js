@@ -49,7 +49,7 @@ define("MrktTestDemoApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				"values": {
 					"type": "mrkt.Demo",
 					"userDefinedHue": 50,
-					"userEmail": "k.krylov@creatio.com"
+					"userEmail": "$MrktName"
 				},
 				"parentName": "GeneralInfoTab",
 				"propertyName": "items",
@@ -61,7 +61,8 @@ define("MrktTestDemoApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				"MrktName": {
 					"modelConfig": {
 						"path": "PDS.MrktName"
-					}
+					},
+					
 				},
 				"Id": {
 					"modelConfig": {

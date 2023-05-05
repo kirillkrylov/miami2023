@@ -59,6 +59,7 @@ jobs:
             /d:sonar.cs.opencover.reportsPaths=".\TestResults\coverage.opencover.xml";
           Set-Location -Path .\tasks;
           .\build-framework.cmd;
+          Set-Location -Path .\..;
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
   # deploy:
   #   name: Deploy

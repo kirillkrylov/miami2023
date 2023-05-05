@@ -1,0 +1,27 @@
+{
+	"total_count": 1,
+	"incomplete_results": false,
+	"items": [
+		{
+			"login": "kirillkrylov",
+			"id": 7285114,
+			"node_id": "MDQ6VXNlcjcyODUxMTQ=",
+			"avatar_url": "https://avatars.githubusercontent.com/u/7285114?v=4",
+			"gravatar_id": "",
+			"url": "https://api.github.com/users/kirillkrylov",
+			"html_url": "https://github.com/kirillkrylov",
+			"followers_url": "https://api.github.com/users/kirillkrylov/followers",
+			"following_url": "https://api.github.com/users/kirillkrylov/following{/other_user}",
+			"gists_url": "https://api.github.com/users/kirillkrylov/gists{/gist_id}",
+			"starred_url": "https://api.github.com/users/kirillkrylov/starred{/owner}{/repo}",
+			"subscriptions_url": "https://api.github.com/users/kirillkrylov/subscriptions",
+			"organizations_url": "https://api.github.com/users/kirillkrylov/orgs",
+			"repos_url": "https://api.github.com/users/kirillkrylov/repos",
+			"events_url": "https://api.github.com/users/kirillkrylov/events{/privacy}",
+			"received_events_url": "https://api.github.com/users/kirillkrylov/received_events",
+			"type": "User",
+			"site_admin": false,
+			"score": 1.0
+		}
+	]
+}

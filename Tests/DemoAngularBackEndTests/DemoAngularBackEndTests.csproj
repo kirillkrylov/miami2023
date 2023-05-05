@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MockResponse\Mock_FindUser_kirillkrylov.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="MockResponse\Mock_FindUser_kirillkrylov.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+
+	  <PackageReference Include="coverlet.msbuild" Version="3.1.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+
+	  <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.6" />
+
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+	  <PackageReference Include="System.Net.Http" Version="4.3.4" />
+
+	  <Reference Include="System.Web" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.6" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.6" />
+	  <PackageReference Include="NSubstitute" Version="5.0.0" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+	  <PackageReference Include="ErrorOr" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\packages\DemoAngularBackEnd\Files\DemoAngularBackEnd.csproj" />
+  </ItemGroup>
+
+</Project>

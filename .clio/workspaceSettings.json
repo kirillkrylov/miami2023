@@ -1,0 +1,8 @@
+{
+  "Packages": [
+    "demoangular",
+    "MrktTestDemoApp",
+    "DemoAngularBackEnd"
+  ],
+  "ApplicationVersion": "8.0.7"
+}

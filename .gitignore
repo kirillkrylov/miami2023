@@ -1,0 +1,9 @@
+.application
+.nuget
+**/.vs
+.vscode
+**/Bin
+**/obj
+**/node_modules
+**/.angular
+packages/MrktTestDemoApp

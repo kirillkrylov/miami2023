@@ -1,0 +1,12 @@
+{
+  "Descriptor": {
+    "UId": "6fcf2055-4798-4e4a-addb-22098d95a7b5",
+    "PackageVersion": "7.8.0",
+    "Name": "DemoAngularBackEnd",
+    "Type": 1,
+    "ProjectPath": "Files/DemoAngularBackEnd.csproj",
+    "ModifiedOnUtc": "/Date(1682940353000)/",
+    "Maintainer": "Customer",
+    "DependsOn": []
+  }
+}

@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{3b541667-abc3-4775-bf4c-ed9995efdf5a}") = "demoangular", "..\packages\demoangular\Files\demoangular.csproj", "{c91018ac-cf94-455e-bcb7-a2addcbd927f}"
+EndProject
+Project("{1188ecd6-635e-4adc-9b08-1af39f108517}") = "DemoAngularBackEnd", "..\packages\DemoAngularBackEnd\Files\DemoAngularBackEnd.csproj", "{383d499e-e88b-4e03-a492-bc5b96f8a246}"
+EndProject
+Project("{5c82f284-0dd7-450c-a2e8-7d83af180f66}") = "MrktTestDemoApp", "..\packages\MrktTestDemoApp\Files\MrktTestDemoApp.csproj", "{8cecf1a0-dab2-4655-b0ee-e057b5be56c3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+			{c91018ac-cf94-455e-bcb7-a2addcbd927f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+			{c91018ac-cf94-455e-bcb7-a2addcbd927f}.Debug|Any CPU.Build.0 = Debug|Any CPU
+			{c91018ac-cf94-455e-bcb7-a2addcbd927f}.Release|Any CPU.ActiveCfg = Release|Any CPU
+			{c91018ac-cf94-455e-bcb7-a2addcbd927f}.Release|Any CPU.Build.0 = Release|Any CPU
+			{383d499e-e88b-4e03-a492-bc5b96f8a246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+			{383d499e-e88b-4e03-a492-bc5b96f8a246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+			{383d499e-e88b-4e03-a492-bc5b96f8a246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+			{383d499e-e88b-4e03-a492-bc5b96f8a246}.Release|Any CPU.Build.0 = Release|Any CPU
+			{8cecf1a0-dab2-4655-b0ee-e057b5be56c3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+			{8cecf1a0-dab2-4655-b0ee-e057b5be56c3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+			{8cecf1a0-dab2-4655-b0ee-e057b5be56c3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+			{8cecf1a0-dab2-4655-b0ee-e057b5be56c3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+﻿{
+  "Descriptor": {
+    "UId": "fbd115d3-d483-4bfc-8692-bbc9bb1849f1",
+    "PackageVersion": "7.8.0",
+    "Name": "demoangular",
+    "Type": 1,
+    "ModifiedOnUtc": "\/Date(1679046525000)\/",
+    "Maintainer": "Customer",
+    "ProjectPath": "Files/demoangular.csproj",
+    "DependsOn": []
+  }
+}

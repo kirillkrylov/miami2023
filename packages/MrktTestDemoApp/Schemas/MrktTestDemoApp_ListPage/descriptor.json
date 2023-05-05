@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "b380a2e2-f780-46bf-a632-2d337dddb7f4",
+    "Name": "MrktTestDemoApp_ListPage",
+    "ModifiedOnUtc": "\/Date(1679047649000)\/",
+    "Parent": {
+      "UId": "3f1f3f38-a0a4-4549-b895-249fb08f554a",
+      "Name": "ListFreedomTemplate"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "TestDemoApp list page",
+    "DependsOn": []
+  }
+}

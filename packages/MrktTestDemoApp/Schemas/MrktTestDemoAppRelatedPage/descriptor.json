@@ -1,0 +1,10 @@
+﻿{
+  "Descriptor": {
+    "UId": "ee4c3e55-e816-4404-aa1e-52152e2db27b",
+    "Name": "MrktTestDemoAppRelatedPage",
+    "ModifiedOnUtc": "\/Date(1679047649000)\/",
+    "ManagerName": "AddonSchemaManager",
+    "Caption": "TestDemoApp (Page settings)",
+    "DependsOn": []
+  }
+}

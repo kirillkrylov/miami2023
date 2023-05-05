@@ -1,0 +1,14 @@
+﻿{
+  "Descriptor": {
+    "UId": "f6f21dd0-1720-4329-bacd-7ad4a1b8feb6",
+    "Name": "MrktTestDemoApp_Detail",
+    "ModifiedOnUtc": "\/Date(1679047649000)\/",
+    "Parent": {
+      "UId": "01eb38ee-668a-42f0-999d-c2534f979089",
+      "Name": "BaseGridDetailV2"
+    },
+    "ManagerName": "ClientUnitSchemaManager",
+    "Caption": "TestDemoApp detail",
+    "DependsOn": []
+  }
+}

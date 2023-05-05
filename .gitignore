@@ -6,4 +6,6 @@
 **/obj
 **/node_modules
 **/.angular
-packages/MrktTestDemoApp
+**/resource.??-??.xml
+!**/resource.en-US.xml
+

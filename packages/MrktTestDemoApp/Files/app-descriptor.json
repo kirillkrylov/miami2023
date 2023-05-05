@@ -1,0 +1,19 @@
+{
+  "Name": "TestDemoApp",
+  "Code": "MrktTestDemoApp",
+  "Description": "",
+  "Maintainer": "Customer",
+  "Icon": "PHN2ZyBpZD0iSWNvbl9wYWdlc18tXzI0eDI0X2hlYXZ5IiBkYXRhLW5hbWU9Ikljb24gfCBwYWdlcyAtIDI0eDI0IHwgaGVhdnkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPg0KICA8cmVjdCBpZD0iUmVjdGFuZ2xlXzQyNDIxIiBkYXRhLW5hbWU9IlJlY3RhbmdsZSA0MjQyMSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIi8+DQogIDxwYXRoIGlkPSJTdWJ0cmFjdGlvbl8xMDA0IiBkYXRhLW5hbWU9IlN1YnRyYWN0aW9uIDEwMDQiIGQ9Ik0xMTU3MS0xMzEyMmgtMTRhMiwyLDAsMCwxLTItMnYtMTJhMiwyLDAsMCwxLDItMmgxNGEyLDIsMCwwLDEsMiwydjEyQTIsMiwwLDAsMSwxMTU3MS0xMzEyMlptLTE0LTExdjhhMSwxLDAsMCwwLDEsMWgxMmExLDEsMCwwLDAsMS0xdi04WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTExNTUyIDEzMTQyKSIgZmlsbD0iI2ZmZiIvPg0KPC9zdmc+",
+  "IconName": "default-app-item-image.svg",
+  "Color": "#FF4013",
+  "MarketplaceLink": "",
+  "HelpLink": "",
+  "OrderLink": "",
+  "SupportEmail": "",
+  "Packages": [
+    {
+      "UId": "c8a4ca69-0c91-4138-89ef-9b9c9b4b88dd",
+      "Name": "MrktTestDemoApp"
+    }
+  ]
+}

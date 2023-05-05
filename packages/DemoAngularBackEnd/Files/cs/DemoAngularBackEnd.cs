@@ -35,6 +35,9 @@
 		/// <returns></returns>
 		Task<ErrorOr<List<Week>>> GetCalendarForUser(string login);
 
+		Task<int[]> GetCalendarDaysDisplay(string login);
+
+
 		#endregion
 
 	}
@@ -89,6 +92,10 @@
 		public Task<ErrorOr<List<Week>>> GetCalendarForUser(string login) {
 			IGithubService githubService = _serviceProvider.GetRequiredService<IGithubService>();
 			return githubService.GetCalendarForUser(login);
+		}
+		public Task<int[]> GetCalendarDaysDisplay(string login) {
+			IGithubService githubService = _serviceProvider.GetRequiredService<IGithubService>();
+			return githubService.GetCalendarDaysDisplay(login);
 		}
 
 		#endregion

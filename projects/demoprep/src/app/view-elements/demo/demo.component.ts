@@ -47,20 +47,32 @@ export class DemoComponent  implements OnInit{
 	@CrtInput()
 	userDefinedData: Array<number> = new Array<number>();
 
+	
+	private _userEmail : string = "";
+	public get userEmail() : string {
+		return this._userEmail;
+	}
+	@Input() 
+	@CrtInput()
+	public set userEmail(v : string) {
+		this._userEmail = v;
+		(async ()=>{
+			const login = await this.getData(this.userEmail);
+			await this.getCalendar(login);
+		})();
+	}
+	
+
 	ngOnInit(): void {
 		
 		// this.userDefinedData.forEach(d=>{
 		// 	this.calendarData.push(`c${d}`);
 		// });
 
-		for(var i = 0; i<52*7; i++){
-			const c = this.getRandomInt(1,5);
-			this.calendarData.push(`c${c}`); 
-		}
-
-		// (async ()=>{
-		// 	await this.getData();
-		// })();
+		// for(var i = 0; i<52*7; i++){
+		// 	const c = this.getRandomInt(1,5);
+		// 	this.calendarData.push(`c${c}`); 
+		// }
 	}
 
 	/** Calculates random integers between min and max
@@ -78,11 +90,30 @@ export class DemoComponent  implements OnInit{
 	/** Gets data from github
 	 * 
 	 */
-	async getData():Promise<void>{
+	async getData(userEmail: string):Promise<string>{
 		const httpClient = new HttpClientService();
 		const result = await httpClient.get(
-			"/rest/GithubDataService/Test",
+			`/rest/GitHubData/FindUser?searchValue=${userEmail}`,
 			{responseType: "text"});
-		console.log(result);
+
+		if(result.body){
+			const login = JSON.parse(result.body).value[0].Login
+			return login;
+		}
+		return "";
+	}
+
+	async getCalendar(login:string):Promise<void>{
+		const httpClient = new HttpClientService();
+		const result = await httpClient.get(
+			`/rest/GitHubData/GetCalendarForUser?login=${login}`,
+			{responseType: "text"});
+		if(result.body){
+			const daysArray:Array<number> =  JSON.parse(result.body)['value']
+			daysArray.forEach(d=>{
+				this.calendarData.push(`c${d}`); 
+			})
+			console.log(result.body);
+		}
 	}
 }

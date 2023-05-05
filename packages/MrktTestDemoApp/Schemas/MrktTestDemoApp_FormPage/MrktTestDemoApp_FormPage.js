@@ -48,7 +48,8 @@ define("MrktTestDemoApp_FormPage", /**SCHEMA_DEPS*/[]/**SCHEMA_DEPS*/, function/
 				"name": "Demo_x619z4p",
 				"values": {
 					"type": "mrkt.Demo",
-					"userDefinedHue": 130
+					"userDefinedHue": 50,
+					"userEmail": "k.krylov@creatio.com"
 				},
 				"parentName": "GeneralInfoTab",
 				"propertyName": "items",

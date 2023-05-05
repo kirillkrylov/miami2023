@@ -63,21 +63,22 @@ namespace DemoAngularBackEnd.WebServices
 		[WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json,
 			BodyStyle = WebMessageBodyStyle.Bare,
 			ResponseFormat = WebMessageFormat.Json)]
-		public MyValueResponse<List<Week>> GetCalendarForUser(string login) {
-			ErrorOr<List<Week>> response = AppStartUp.DemoAngularBackEnd.GetCalendarForUser(login).Result;
+		public MyValueResponse<int[]> GetCalendarForUser(string login) {
+			//ErrorOr<List<Week>> response = AppStartUp.DemoAngularBackEnd.GetCalendarForUser(login).Result;
+			var daysArray = AppStartUp.DemoAngularBackEnd.GetCalendarDaysDisplay(login).Result;
 
 			//IDemoAngularBackEnd gitHub = ClassFactory.Get<IDemoAngularBackEnd>("DemoAngularBackEnd");
 			//ErrorOr<List<Week>> response = gitHub.GetCalendarForUser(login).Result;
 
-			if(response.IsError) {
-				return new MyValueResponse<List<Week>> {
-					Success = false
-				};
-			}
+			//if(response.IsError) {
+			//	return new MyValueResponse<int[]> {
+			//		Success = false
+			//	};
+			//}
 
-			return new MyValueResponse<List<Week>> {
+			return new MyValueResponse<int[]> {
 				Success = true,
-				Value = response.Value
+				Value = daysArray
 			};
 		}
 

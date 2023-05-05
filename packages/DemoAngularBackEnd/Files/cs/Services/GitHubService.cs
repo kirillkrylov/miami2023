@@ -4,6 +4,7 @@
 	using ErrorOr;
 	using System;
 	using System.Collections.Generic;
+	using System.Linq;
 	using System.Net.Http;
 	using System.Net.Http.Headers;
 	using System.Text;
@@ -36,6 +37,8 @@
 		/// <returns></returns>
 		Task<ErrorOr<List<Week>>> GetCalendarForUser(string login);
 
+
+		Task<int[]> GetCalendarDaysDisplay(string login);
 		#endregion
 
 	}
@@ -112,6 +115,72 @@
 			} catch(Exception e) {
 				return Error.Failure(e.Message);
 			}
+		}
+
+
+		public async Task<int[]> GetCalendarDaysDisplay(string login) {
+			var weeks = (await GetCalendarForUser(login)).Value;
+
+
+			int lastDontributionDay = weeks.Last().ContributionDays.Last().WeekDay;
+			DateTime now = DateTime.Now;
+			int daysUntilSaturday = ((int)DayOfWeek.Saturday - (int)now.DayOfWeek + 7) % 7;
+
+
+			for(var i = 0;  i < daysUntilSaturday; i++) {
+				weeks.Last().ContributionDays.Add(new ContributionDay() {
+					Count = 0
+				});
+			}
+
+			
+			int[] mondays = new int[52];
+			int[] tuesdays = new int[52];
+			int[] wednesdays = new int[52];
+			int[] thursdays = new int[52];
+			int[] fridays = new int[52];
+			int[] saturdays = new int[52];
+			int[] sundays = new int[52];
+
+			int processedWeeks = 0;
+			
+			while(processedWeeks<52) {
+
+				
+				int i = (weeks.Count ==53)? 1: 0;
+
+				var days = weeks[weeks.Count-1-processedWeeks];
+
+				sundays[weeks.Count-1-processedWeeks-i] = days.ContributionDays.FirstOrDefault((d=> d.WeekDay == 0))?.Count ?? 0;
+				mondays[weeks.Count-1-processedWeeks-i] = days.ContributionDays.FirstOrDefault((d=> d.WeekDay == 1))?.Count ?? 0;
+				tuesdays[weeks.Count - 1 -processedWeeks-i] = days.ContributionDays.FirstOrDefault((d=> d.WeekDay == 2))?.Count ?? 0;
+				wednesdays[weeks.Count - 1 -processedWeeks-i] = days.ContributionDays.FirstOrDefault((d => d.WeekDay == 3))?.Count ?? 0;
+				thursdays[weeks.Count - 1 -processedWeeks-i] = days.ContributionDays.FirstOrDefault((d => d.WeekDay == 4))?.Count ?? 0;
+				fridays[weeks.Count - 1 -processedWeeks-i] = days.ContributionDays.FirstOrDefault((d => d.WeekDay == 5))?.Count ?? 0;
+				saturdays[weeks.Count - 1 -processedWeeks-i] = days.ContributionDays.FirstOrDefault((d=> d.WeekDay == 6))?.Count ?? 0;
+				processedWeeks ++;
+			}
+			
+
+			
+
+			var result = new List<int>();
+			result.AddRange(mondays);
+			result.AddRange(tuesdays);
+			result.AddRange(wednesdays);
+			result.AddRange(thursdays);
+			result.AddRange(fridays);
+			result.AddRange(saturdays);
+			result.AddRange(sundays);
+
+			var max = result.Max();
+
+			result.ForEach(i=> {
+				i= (i/max);
+			});
+			
+			return result.ToArray();
+
 		}
 
 		#endregion

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Web.OData</name>
+    </assembly>
+    <members>
+        <member name="T:Terrasoft.Web.OData.IODataEntityModelBuilder">
+            <summary>
+            Provides methods for working with entity model builder.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Web.OData.IODataEntityModelBuilder.EdmModel">
+            <summary>
+            Returns EDM model.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Web.OData.IODataEntityModelBuilder.ClearEdmModel">
+            <summary>
+            Clear EDM model.
+            </summary>
+        </member>
+    </members>
+</doc>

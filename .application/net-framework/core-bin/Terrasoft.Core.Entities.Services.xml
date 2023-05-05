@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Core.Entities.Services</name>
+    </assembly>
+    <members>
+        <member name="T:Terrasoft.Core.Entities.Services.AspSessionBasedFactory">
+            <summary>
+            ####### ### ######## ########### ###### EntityDataService
+            </summary>
+            <remarks>############ # ###### ###### ####### # ###### ######### ASP.NET</remarks>
+        </member>
+        <member name="T:Terrasoft.Core.Entities.Services.EntityDataService">
+            <summary>
+            EntityDataService ######## # ###### ############# # ASP, ###### #### ###### ############
+            ##### ############ ###### ########## #######.
+            ###### ## ###### ###### ########## # #### # ##########.
+            ### ########## ##### ######### ###### ###### ###### # ServiceContext,
+            ####### ###### ###### ### ###### # ASP ###### ############
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Entities.Services.MetadataProvider.ServiceOperations">
+            <summary>
+            ###### ##### ######### ##### ######## ######## # ###### #######, 
+            ######## - ### ######### ###### ########### # EntityServiceProvider # ######### ######### WebGet/WebInvoke.
+            
+            http://msdn.microsoft.com/en-us/library/cc668788.aspx - Service Operations (WCF Data Services)
+            http://msdn.microsoft.com/en-us/library/dd744841.aspx - How to: Define a Service Operation
+            http://msdn.microsoft.com/en-us/library/hh230677.aspx - Calling Service Operations
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Core.Entities.Services.MetadataProvider.GetResourceAssociationSet(System.Data.Services.Providers.ResourceSet,System.Data.Services.Providers.ResourceType,System.Data.Services.Providers.ResourceProperty)">
+            <summary>
+            ##### ########## ###### ############## ##### ##### ##### ResourceType
+            </summary>
+        </member>
+        <member name="F:Terrasoft.Core.Entities.Services.PagingProvider.PageSize">
+            <summary>
+            ### ############# OData ######### ######## ###### ########
+            ### ###### EntitySchema-# ########.
+            ######## ##### EntityDataService.InitializeService()</summary>
+        </member>
+        <member name="F:Terrasoft.Core.Entities.Services.QueryProvider.ReadUncommitedQueryParameterName">
+            <summary>
+            ######## ######### #######, ########### ## ########## ####### # ###### "########" ######.
+            </summary>
+        </member>
+        <member name="F:Terrasoft.Core.Entities.Services.QueryProvider.GetDefValuesQueryParameterName">
+            <summary>
+            ######## ######### #######, ########### ## ##### ######### ######## ## ######### ### ########.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Core.Entities.Services.EntityLazyProxy.SetColumnValue(System.String,System.Object)">
+            <summary>
+            ############# ######## ####### ### #######
+            </summary>
+            <remarks> ############## .NET ###### ######## ########## ######## ### #### #######,
+            #### ############ #### ######### ######## ### 3# #######, ## WCF ######### ######## ## #########
+            ### #### ######### #######</remarks>
+        </member>
+        <member name="M:Terrasoft.Core.Entities.Services.UpdateProvider.ResolveResource(System.Object)">
+            <summary>
+            ########## ######### #######, ############### ######### ######### ########
+            </summary>
+            <remarks> ## ######### ###### ########## ((EntityLazyProxy)resource).Entity.Value, 
+            ## ######## ##### ########## ######, ### ## ############## ## ###### ###### # ##.
+            # ##### ###### ### ##### #### ############ ############ ###### ###### ##### # EntityLazyProxy.
+            ##### ### ############:
+            	EntityDataServiceQueryProvider.GetResourceType()
+            	########## ##### ###### SaveChanges ### ############ ####### ### ####### POST
+            </remarks>
+        </member>
+    </members>
+</doc>

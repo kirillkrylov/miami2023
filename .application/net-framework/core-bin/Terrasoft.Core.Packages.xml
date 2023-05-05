@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Core.Packages</name>
+    </assembly>
+    <members>
+        <member name="T:Terrasoft.Core.Packages.FileStorage.FileStorageTransactionFactory">
+            <summary>
+            A factory for creating an instance of the <see cref="T:Terrasoft.Core.Packages.FileStorage.IFileStorageTransaction"/> type.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Core.Packages.FileStorage.IFileStorage">
+            <summary>
+            A file storage interface.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.FileStorage.IFileStorage.BeginTransaction">
+            <summary>
+            Begins a file storage transaction.
+            </summary>
+            <returns>Instance of the <see cref="T:Terrasoft.Core.Packages.FileStorage.IFileStorageTransaction"/> type.</returns>
+        </member>
+        <member name="T:Terrasoft.Core.Packages.FileStorage.FileStorage">
+            <inheritdoc />
+        </member>
+        <member name="M:Terrasoft.Core.Packages.FileStorage.FileStorage.#ctor(Terrasoft.Core.Packages.FileStorage.FileStorageTransactionFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Terrasoft.Core.Packages.FileStorage.FileStorage"/> type.
+            </summary>
+            <param name="fileStorageTransactionFactory">Instance of the <see cref="T:Terrasoft.Core.Packages.FileStorage.FileStorageTransactionFactory"/>
+            factory to use.</param>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.FileStorage.FileStorage.BeginTransaction">
+            <inheritdoc />
+        </member>
+        <member name="M:Terrasoft.Core.Packages.FileStorage.IFileStorageTransaction.Get">
+            <summary>##### ####### ### ####### ############.</summary>
+            <returns>#######, ########## # ######## ##### ### ######, # ######## ######## - ###### #### ######.
+            </returns>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.FileStorage.IFileStorageTransaction.AddFromCurrentStorage(System.String)">
+            <summary>
+            Adds file with the specified name from current storage to a new storage.
+            If this file does not exist then adds the file from the specified path.
+            </summary>
+            <param name="defaultFilePath">Default file path.</param>
+        </member>
+        <member name="T:Terrasoft.Core.Packages.IODataEdmModelChangesListener">
+            <summary>
+            Provides methods for listening to Edm model changes.
+            </summary>
+        </member>
+        <member name="E:Terrasoft.Core.Packages.IODataEdmModelChangesListener.ODataEdmModelChanged">
+            <summary>
+            Fires when the EDM model have changed.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.IODataEdmModelChangesListener.OnODataEdmModelChanged">
+            <summary>
+            Raises the EdmModelChanged event.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Core.Packages.ODataEdmModelChangesListener">
+            <inheritdoc cref="T:Terrasoft.Core.Packages.IODataEdmModelChangesListener"/>
+        </member>
+        <member name="E:Terrasoft.Core.Packages.ODataEdmModelChangesListener.ODataEdmModelChanged">
+            <inheritdoc cref="E:Terrasoft.Core.Packages.IODataEdmModelChangesListener.ODataEdmModelChanged"/>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.ODataEdmModelChangesListener.OnODataEdmModelChanged">
+            <inheritdoc cref="M:Terrasoft.Core.Packages.IODataEdmModelChangesListener.OnODataEdmModelChanged"/>
+        </member>
+        <member name="T:Terrasoft.Core.Packages.SchemaDependencyItem">
+            <summary>
+            ######### ########### #####.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Packages.SchemaDependencyItem.UId">
+            <summary>
+            ############# ###########.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Packages.SchemaDependencyItem.Name">
+            <summary>
+            ############ ###########.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Packages.SchemaDependencyItem.CreatedInSchemaUId">
+            <summary>
+            ############# ##### # ####### #### ####### ###########.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Packages.SchemaDependencyItem.ModifiedInSchemaUId">
+            <summary>
+            ############# ##### # ####### #### ######## ###########.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Packages.SchemaDependencyItem.SchemaUId">
+            <summary>
+            ############# #####.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Core.Packages.SchemaDependencyItem.ManagerName">
+            <summary>
+            ############ #########.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.SchemaDependencyItem.GetHashCode">
+            <summary>
+            ########## ###-### ### ###### ###########.
+            </summary>
+            <returns>
+            ###-### ### ####### ########## <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/> # #### 32-######## ######
+            ##### ## ######.
+            </returns>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.SchemaDependencyItem.Equals(System.Object)">
+            <summary>
+            ##########, ##### ## ###### ######### <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/> # ########
+            ######### <see cref="T:System.Object"/>.
+            </summary>
+            <param name="obj">######### <see cref="T:System.Object"/> ### ######### # ###### ###########
+            <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/>.</param>
+            <returns>
+            <c>true</c>, #### <paramref name="obj"/> ##### ### <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/> # ###
+            ######## ######### ## ######### ####### ########## <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/>; 
+            ##### - <c>false</c>.
+            </returns>
+            <remarks>############# #####.</remarks>
+        </member>
+        <member name="M:Terrasoft.Core.Packages.SchemaDependencyItem.Equals(Terrasoft.Core.Packages.SchemaDependencyItem)">
+            <summary>
+            ##########, ##### ## ###### ######### <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/> # ########
+            ######### <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/>.
+            </summary>
+            <param name="other">######### <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/> ### ######### # ###### ###########.</param>
+            <returns>
+            <c>true</c>, #### <paramref name="other"/> ######### ## ######### ####### ########## 
+            <see cref="T:Terrasoft.Core.Packages.SchemaDependencyItem"/>; 
+            ##### - <c>false</c>.
+            </returns>
+        </member>
+    </members>
+</doc>

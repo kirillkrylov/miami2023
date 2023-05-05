@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Svn</name>
+    </assembly>
+    <members>
+        <member name="T:Terrasoft.Svn.IBaseSvnClient">
+            <summary>
+            ######### ####### # ####### ######## ######.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Svn.IBaseSvnClient.Authenticate(System.String,System.String)">
+            <summary>
+            ######### ######### ############# ####### ######## ######.
+            </summary>
+            <param name="login">##### # #########.</param>
+            <param name="password">###### # #########.</param>
+        </member>
+        <member name="M:Terrasoft.Svn.IBaseSvnClient.CheckOut(System.Uri,System.String,System.Int32)">
+            <summary>
+            ######### ###### ######## ##### # ###### ######## ######## ## ####### ######## ###### # ######### ##### 
+            ####### #####.
+            </summary>
+            <param name="sourceUri">#### # ######## ##### ####### ######## ######.</param>
+            <param name="workingCopyPath">#### # ####### #####.</param>
+            <param name="revision">##### #######, ######### ####### ###### #### #########.</param>
+            <returns><c>true</c>, #### ######## ###### ## ####### ######## ###### #########; 
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.IBaseSvnClient.CheckOut(System.Uri,System.String)">
+            <summary>
+            ######### ###### ######## ##### # ###### ######### ####### ## ####### ######## ###### # ######### ##### 
+            ####### #####.
+            </summary>
+            <param name="sourceUri">#### # ######## ##### ####### ######## ######.</param>
+            <param name="workingCopyPath">#### # ####### #####.</param>
+            <returns><c>true</c>, #### ######## ###### ## ####### ######## ###### ###### #######; 
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.IBaseSvnClient.Export(System.Uri,System.String)">
+            <summary>
+            ############ ######## ####### ## ####### ######## ###### # ######### #####.
+            </summary>
+            <param name="sourceUri">#### # ######## # ####### ######## ######.</param>
+            <param name="destinationPath">#### # ######### #####.</param>
+            <returns><c>true</c>, #### ####### ###### ## ####### ######## ###### ###### #######;
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.IBaseSvnClient.GetInfo(System.Uri,Terrasoft.Svn.SvnInformation@)">
+            <summary>
+            ######## ########## ## ########## ######## ## ####### ######## ######.
+            </summary>
+            <param name="sourceUri">#### # ######## # ####### ######## ######.</param>
+            <param name="svnInformation">########## ## ####### <paramref name = "sourceUri"/>.</param>
+            <returns><c>true</c>, #### ######## ######### #######;
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.IBaseSvnClient.Merge(System.String,System.String)">
+            <summary>
+            Apply the differences between two sources to a working copy path
+            </summary>
+            <param name="sourceRepositoryUri">URI of repository containing latest changes.</param>
+            <param name="destinationWorkingCopyPath">Local working directory of repository to apply changes.</param>
+        </member>
+        <member name="T:Terrasoft.Svn.NodeKind">
+            <summary>
+            ### ####.
+            </summary>
+        </member>
+        <member name="F:Terrasoft.Svn.NodeKind.None">
+            <summary>
+            ###########.
+            </summary>
+        </member>
+        <member name="F:Terrasoft.Svn.NodeKind.File">
+            <summary>
+            ####.
+            </summary>
+        </member>
+        <member name="F:Terrasoft.Svn.NodeKind.Directory">
+            <summary>
+            #######.
+            </summary>
+        </member>
+        <member name="F:Terrasoft.Svn.NodeKind.Unknown">
+            <summary>
+            ##########.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Svn.SharpSvn.SvnClientFactory">
+            <summary>
+            ####### ####### ### ######### ######## ####### ######## ######.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientFactory.CreateInstance">
+            <summary>
+            ########## ######### ########## <see cref="T:Terrasoft.Svn.IBaseSvnClient"/>.
+            </summary>
+            <returns>######### ########## <see cref="T:Terrasoft.Svn.IBaseSvnClient"/>.</returns>
+        </member>
+        <member name="T:Terrasoft.Svn.SharpSvn.SvnClientWrapper">
+            <summary>
+            ####### ####### ####### ######## ######.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientWrapper.Authenticate(System.String,System.String)">
+            <summary>
+            ######### ######### ############# ####### ######## ######.
+            </summary>
+            <param name="login">##### # #########.</param>
+            <param name="password">###### # #########.</param>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientWrapper.CheckOut(System.Uri,System.String,System.Int32)">
+            <summary>
+            ######### ###### ######## ##### # ###### ######## ######## ## ####### ######## ###### # ######### ##### 
+            ####### #####.
+            </summary>
+            <param name="sourceUri">#### # ######## ##### ####### ######## ######.</param>
+            <param name="workingCopyPath">#### # ####### #####.</param>
+            <param name="revision">##### #######, ######### ####### ###### #### #########.</param>
+            <returns><c>true</c>, #### ######## ###### ## ####### ######## ###### #########; 
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientWrapper.CheckOut(System.Uri,System.String)">
+            <summary>
+            ######### ###### ######## ##### # ###### ######### ####### ## ####### ######## ###### # ######### ##### 
+            ####### #####.
+            </summary>
+            <param name="sourceUri">#### # ######## ##### ####### ######## ######.</param>
+            <param name="workingCopyPath">#### # ####### #####.</param>
+            <returns><c>true</c>, #### ######## ###### ## ####### ######## ###### ###### #######; 
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientWrapper.Export(System.Uri,System.String)">
+            <summary>
+            ############ ######## ####### ## ####### ######## ###### # ######### #####.
+            </summary>
+            <param name="sourceUri">#### # ######## # ####### ######## ######.</param>
+            <param name="destinationPath">#### # ######### #####.</param>
+            <returns><c>true</c>, #### ####### ###### ## ####### ######## ###### ###### #######;
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientWrapper.GetInfo(System.Uri,Terrasoft.Svn.SvnInformation@)">
+            <summary>
+            ######## ########## ## ########## ######## ## ####### ######## ######.
+            </summary>
+            <param name="sourceUri">#### # ######## # ####### ######## ######.</param>
+            <param name="svnInformation">########## ## ####### <paramref name = "sourceUri"/>.</param>
+            <returns><c>true</c>, #### ######## ######### #######;
+            # ######### ###### — ######## <c>false</c>.</returns>
+        </member>
+        <member name="M:Terrasoft.Svn.SharpSvn.SvnClientWrapper.Merge(System.String,System.String)">
+            <summary>
+            Apply the differences between two sources to a working copy path
+            </summary>
+            <param name="sourceRepositoryUri">URI of repository containing latest changes.</param>
+            <param name="destinationWorkingCopyPath">Local working directory of repository to apply changes.</param>
+        </member>
+        <member name="T:Terrasoft.Svn.SvnCredentials">
+            <summary>
+            ####### ###### # ####### ######## ######.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Svn.SvnCredentials.#ctor(System.String,System.String)">
+            <summary>
+            ############## ##### ######### ###### <see cref="T:Terrasoft.Svn.SvnCredentials"/>.
+            </summary>
+            <param name="userName">### ############.</param>
+            <param name="password">######.</param>
+        </member>
+        <member name="P:Terrasoft.Svn.SvnCredentials.UserName">
+            <summary>
+            ### ############.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Svn.SvnCredentials.Password">
+            <summary>
+            ######.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Svn.SvnInformation">
+            <summary>
+            ########## ## ######## # ####### ######## ######.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Svn.SvnInformation.NodeKind">
+            <summary>
+            ### #### ########.
+            </summary>
+        </member>
+    </members>
+</doc>

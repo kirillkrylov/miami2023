@@ -1,0 +1,23 @@
+name: 'Clio install'
+description: 'Push package to target'
+inputs:
+  url:
+    description: 'Destination url'
+    required: true
+  login:
+    description: 'Destination username'
+    required: true
+    default: 'Supervisor'
+  password:
+    description: 'Destination password'
+    required: true
+    default: 'Supervisor'
+runs: 
+  using: "composite"
+  steps:
+    - name: Install Clio tool
+      shell: powershell
+      run: dotnet tool install clio --tool-path .\ClioTool;
+    - name: Install package
+      shell: powershell
+      run: .\ClioTool\clio.exe pushw -u ${{ inputs.url }} -l ${{ inputs.login }} -p ${{ inputs.password }};

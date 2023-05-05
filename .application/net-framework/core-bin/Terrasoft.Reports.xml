@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Reports</name>
+    </assembly>
+    <members>
+        <member name="P:Terrasoft.Reports.ReportSchemaManager.ItemCaption">
+            <summary>
+            ######### ######## ######### ####.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Reports.ReportSchemaManager.ResourceManagerName">
+            <summary>
+            ### ######### ########.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Reports.ReportSchemaManager.GetGenerator(Terrasoft.Core.UserConnection)">
+            <summary>
+            ########## ######### ######## ##### #### #########.
+            </summary>
+            <param name="userConnection">################ ###########.</param>
+            <returns>######### ######## ##### #### #########.</returns>
+        </member>
+    </members>
+</doc>

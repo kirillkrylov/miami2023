@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Store.WebAdapters</name>
+    </assembly>
+    <members>
+        <member name="P:Terrasoft.Store.WebAdapters.AppDomainCacheStore.IsLocalCache">
+            <summary>
+            #######, ############, ### ###### ######## # ######### ######.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Store.WebAdapters.AppDomainCacheProxy.IsLocalCache">
+            <summary>
+            #######, ############, ### ###### ######## # ######### ######.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Store.WebAdapters.NodeCacheStore.IsLocalCache">
+            <summary>
+            #######, ############, ### ###### ######## # ######### ######.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Store.WebAdapters.Proxies.CacheRequestLoggingProxy.IsLocalCache">
+            <summary>
+            #######, ############, ### ###### ######## # ######### ######.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Store.WebAdapters.Proxies.SessionCacheProtectorProxy.IsLocalCache">
+            <summary>
+            #######, ############, ### ###### ######## # ######### ######.
+            </summary>
+        </member>
+        <member name="P:Terrasoft.Store.WebAdapters.SessionCacheStore.IsLocalCache">
+            <summary>
+            #######, ############, ### ###### ######## # ######### ######.
+            </summary>
+        </member>
+    </members>
+</doc>

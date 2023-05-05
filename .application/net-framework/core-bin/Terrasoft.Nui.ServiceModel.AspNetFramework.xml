@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Terrasoft.Nui.ServiceModel.AspNetFramework</name>
+    </assembly>
+    <members>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.BaseDataServiceController">
+            <summary>
+            Base class for DataService controllers.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.ClientLogController">
+            <summary>
+            Controller class for client logging.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.DataServiceController">
+            <summary>
+            Controller class for operations of DataService.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.GetTelephonyConfigController">
+            <summary>
+            Controller class for getting telephony config of DataService.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.GetTelephonyConfigController.GetTelephonyConfig">
+            <summary>
+            Returns telephony parameters config.
+            </summary>
+            <returns>Telephony parameters config.</returns>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.HealthCheckController">
+            <summary>
+            Controller class for checking application health operations.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.Ssp.SspDataServiceController">
+            <summary>
+            Controller class for ssp CRUD-operations of DataService.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.Ssp.SspUserProfileController">
+            <summary>
+            API controller providing operations with ssp user profile.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.Ssp.SspUserSchemaProfileController">
+            <summary>
+            API controller providing operations with ssp user schema profile.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.Controllers.SysSettingsController">
+            <summary>
+            API controller providing operations with system settings.
+            </summary>
+        </member>
+        <member name="T:Terrasoft.Nui.ServiceModel.AspNetFramework.WebApiConfig">
+            <summary>
+            Represents methods for Web API configuration.
+            </summary>
+        </member>
+        <member name="M:Terrasoft.Nui.ServiceModel.AspNetFramework.WebApiConfig.IsWebApiPath(System.String)">
+            <summary>
+            Returns <b>true</b> if specified path is path to Web API controllers corresponds to one of route prefixes.
+            </summary>
+            <param name="path">Path.</param>
+            <returns><b>true</b> if specified path is path to Web API controllers corresponds to one of route prefixes,
+            otherwise - <b>false</b>.</returns>
+        </member>
+    </members>
+</doc>

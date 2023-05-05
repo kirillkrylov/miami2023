@@ -51,15 +51,15 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
+          Set-Location -Path .\tasks;
           .\.sonar\scanner\dotnet-sonarscanner begin `
             /k:"kirillkrylov_miami2023" `
             /o:"kirillkrylov" `
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io";
-          Set-Location -Path .\tasks;
           .\build-framework.cmd;
-          Set-Location -Path .\..;
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          Set-Location -Path .\..;
   # deploy:
   #   name: Deploy
   #   needs: build

@@ -57,10 +57,8 @@ jobs:
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
             /d:sonar.cs.opencover.reportsPaths=".\TestResults\coverage.opencover.xml";
-          $env:CoreLibPath='.\..\..\.application\net-framework\core-bin';
-          $env:RelativePkgFolderPath='.\..\..\.application\net-framework\packages';
-          $env:CoreTargetFramework='net472';
-          dotnet build .\.solution\CreatioPackages.sln;
+          Set-Location -Path .\tasks;
+          .\build-framework.cmd;
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
   # deploy:
   #   name: Deploy
